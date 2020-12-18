@@ -18,5 +18,3 @@ const maxSubArray = (nums) => {
 };
 
 console.log(maxSubArray([-1]));
-
-//Approach 2 = Divide and Conquer
