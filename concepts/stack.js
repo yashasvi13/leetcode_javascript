@@ -1,3 +1,14 @@
+//Stacks are based on the LIFO principle, i.e., the element inserted at the last, is the first element to come out of the list.
+//insertion/deletion only at one end(top)
+//dynamic size, array->fixed size
+//Stack can contain elements of different data type., array->same type
+//stack->linear search, array->linear,binary
+
+//use case
+//1 reversing order
+//2 testing symmetry (palindrome, valid parentheses)
+//3 undoing
+
 const Stack = function () {
   this.count = 0;
   this.storage = {};

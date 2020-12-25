@@ -1,9 +1,9 @@
 //approach 1
 const isValid = (s) => {
   let stack = [];
-
   if (
     s.length < 2 ||
+    s.length % 2 !== 0 ||
     s.charAt(0) === ")" ||
     s.charAt(0) === "}" ||
     s.charAt(0) === "]"
@@ -46,7 +46,7 @@ const isValid = (s) => {
 //   return s.length === 0;
 // };
 
-console.log(isValid("(}"));
+console.log(isValid("(}}"));
 
 //''
 //{}
