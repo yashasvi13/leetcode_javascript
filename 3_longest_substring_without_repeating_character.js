@@ -16,8 +16,8 @@ var lengthOfLongestSubstring = function (s) {
     } else if (mp.size < j - i + 1) {
       while (mp.size < j - i + 1) {
         mp.set(s.charAt(i), mp.get(s.charAt(i)) - 1);
-        if (mp.get(s[i]) === 0) {
-          mp.delete(s[i]);
+        if (mp.get(s.charAt(i)) === 0) {
+          mp.delete(s.charAt(i));
         }
         i++;
       }
