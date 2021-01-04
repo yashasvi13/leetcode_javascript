@@ -1,6 +1,5 @@
 var nextGreaterElement = function (nums2, nums1) {
   let stack = [];
-  let arr = [];
   let mp = new Map();
   for (let i = nums1.length - 1; i >= 0; i--) {
     if (stack.length === 0) {
