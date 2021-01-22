@@ -1,13 +1,11 @@
 const twoSum = (nums, target) => {
-  let hash = new Map();
-  let length = nums.length;
-  for (let i = 0; i < length; i++) {
-    if (hash[nums[i]] >= 0) {
-      return [hash[nums[i]], i];
+  let mp = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    if (mp.has(nums[i])) {
+      return [mp.get(nums[i]), i];
     }
-    hash[target - nums[i]] = i;
+    mp.set(target - nums[i], i);
   }
-  return [];
 };
 
 console.log(twoSum([3, 3, 2], 6));
