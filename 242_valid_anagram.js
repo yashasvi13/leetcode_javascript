@@ -3,7 +3,7 @@ var isAnagram = function (s, t) {
   let letterCount = new Map();
 
   for (let letter of s) {
-    if (letterCount.get(letter) === undefined) {
+    if (!letterCount.has(letter)) {
       letterCount.set(letter, 1);
     } else {
       letterCount.set(letter, letterCount.get(letter) + 1);
@@ -11,7 +11,7 @@ var isAnagram = function (s, t) {
   }
 
   for (let letter of t) {
-    if (letterCount.get(letter) === undefined) {
+    if (!letterCount.has(letter)) {
       return false;
     } else if (letterCount.get(letter) < 1) {
       return false;
